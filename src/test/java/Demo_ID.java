@@ -13,10 +13,5 @@ public class Demo_ID {
 
         driver.findElement(By.name("login[password]")).sendKeys("123456789"); // tim element theo name va kiem tra
 
-
-
-
-
-
     }
 }
