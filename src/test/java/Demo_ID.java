@@ -11,6 +11,12 @@ public class Demo_ID {
         driver.get(("https://live.techpanda.org/index.php/customer/account/login")); // truy cap trang web
         driver.findElement(By.id("email")).sendKeys("abc@gmail.com"); // nhap email kiem tra
 
+        driver.findElement(By.name("login[password]")).sendKeys("123456789"); // tim element theo name va kiem tra
+
+
+
+
+
 
     }
 }
