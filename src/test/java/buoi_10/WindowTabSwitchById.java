@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.Set;
 
-public class WindowTabDemo {
+public class WindowTabSwitchById {
     static WebDriver driver;
 
     @BeforeClass
@@ -45,5 +45,17 @@ public class WindowTabDemo {
         String newTabTitle = driver.getTitle();
         System.out.println("New tab title: " + newTabTitle);
         System.out.println("All window: " + driver.getWindowHandles().size());
+
+        // đóng tab youtube
+        driver.close();
+
+        // trở về tab chính
+        driver.switchTo().window(parentID);
+        System.out.println("Back to parent window: " + driver.getTitle());
+        Assert.assertEquals(driver.getTitle(), "OrangeHRM");
+    }
+    @AfterClass
+    public static void tearDown(){
+        driver.quit();
     }
 }
