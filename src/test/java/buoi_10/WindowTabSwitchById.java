@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -31,7 +33,6 @@ public class WindowTabSwitchById {
         // chờ đến khi element youtube xuất hiện và click youtube
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='https://www.youtube.com/c/OrangeHRMInc']"))).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='https://twitter.com/orangehrm?lang=en']"))).click();
 
         // lấy ID của tất cả các tab đang mở
         Set<String> allWindow = driver.getWindowHandles();
