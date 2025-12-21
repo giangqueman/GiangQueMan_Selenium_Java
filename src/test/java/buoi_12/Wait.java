@@ -29,7 +29,7 @@ public class Wait {
     }
 
     @Test
-    public void customDropdown() {
+    public void seleniumWait() {
         // explicit wait
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
